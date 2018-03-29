@@ -1,6 +1,6 @@
 import sys
 import json
-#import re
+import re
 #from pprint import pprint
 
 def hw():
@@ -9,7 +9,8 @@ def hw():
 def lines(fp):
     print str(len(fp.readlines()))
 def contains_word(s, w):
-    return (' ' + w + ' ') in (' ' + s + ' ')
+    return w in re.findall(r"[\w']+",s)
+    #return (' ' + w + ' ') in (' ' + s + ' ')
 def main():
     sent_file = open(sys.argv[1])
     tweet_file = open(sys.argv[2])
@@ -33,6 +34,7 @@ def main():
         for key in scores:
             if contains_word(tweet[u'text'].encode('utf-8'),key):
               aux = aux+scores[key]
+              #print key
               #print scores[key]
         print aux #"This is the result:",aux
         aux=0
