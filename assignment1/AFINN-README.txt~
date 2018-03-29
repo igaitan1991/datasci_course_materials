@@ -1,4 +1,4 @@
-AFINN is a list of English words rated for valence with an integer
+This is a test for commitment in GitAFINN is a list of English words rated for valence with an integer
 between minus five (negative) and plus five (positive). The words have
 been manually labeled by Finn Årup Nielsen in 2009-2011. The file
 is tab-separated. There are two versions:
