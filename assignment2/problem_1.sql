@@ -34,7 +34,7 @@ SELECT COUNT(DISTINCT docid) FROM frequency WHERE term='law' OR term='legal';
 /****************************************/
 
 SELECT COUNT(*) FROM (
-SELECT docid,SUM(count) FROM frequency GROUP BY docid HAVING sum(count)>300);
+SELECT docid,COUNT(term) FROM frequency GROUP BY docid HAVING count(term)>300);
 
 
 /****************************************/
