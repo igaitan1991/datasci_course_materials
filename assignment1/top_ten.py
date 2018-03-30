@@ -22,11 +22,11 @@ def main():
 				else:
 					freq[hashtag[u'text']]=1
 	except KeyError:
-		freq["NO_HASHTAG"]=0
-	
-	del freq["NO_HASHTAG"]
+		freq["NO_HASHTAG"]=0	
+	#del freq["NO_HASHTAG"]
 	for x in freq.keys():
-		print x + " "+ str(freq[x])			
+		if freq[x]!=0:
+			print x + " "+ str(freq[x])			
 	tweet_file.close()
 if __name__ == '__main__':
 	main()
