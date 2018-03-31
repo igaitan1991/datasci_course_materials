@@ -26,10 +26,11 @@ def reducer(key, list_of_values):
     aux=0
     for x in list_of_values:
 	aux += x
-    if aux==-1:
+    if aux!=0:
     	mr.emit((key))
-    elif aux==1:
 	mr.emit((key[1],key[0]))
+    #elif aux==1:
+	#mr.emit((key[1],key[0]))
 # Do not modify below this line
 # =============================
 if __name__ == '__main__':
