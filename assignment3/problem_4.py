@@ -2,7 +2,7 @@ import MapReduce
 import sys
 
 """
-Probelm 3 Solution in the Simple Python MapReduce Framework
+Probelm 4 Solution in the Simple Python MapReduce Framework
 """
 
 mr = MapReduce.MapReduce()
